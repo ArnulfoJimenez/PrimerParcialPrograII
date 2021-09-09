@@ -1,0 +1,15 @@
+﻿@model ArnufoJosueSantosJimenez.Models.ViewModels.MontoViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Monto", "Index", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Cantidad)
+    @Html.TextBoxFor(m => m.Cantidad)
+    @Html.ValidationMessageFor(m => m.Cantidad, null, new { @class = "red" })
+
+
+    <input type="submit" />
